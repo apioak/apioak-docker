@@ -16,3 +16,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag apioak:latest
+      with:
+        publish: true
+        dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
+        dockerHubPassword : ${{ secrets.DOCKER_PASSWORD }}
+
