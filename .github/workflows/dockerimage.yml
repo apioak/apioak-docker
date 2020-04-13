@@ -17,8 +17,7 @@ jobs:
     - name: Build and publish images
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        publish: true
-        imageName: hyr326/apioak
-        tag: latest
-        dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
-        dockerHubPassword : ${{ secrets.DOCKER_PASSWORD }}
+        name: hyr326/apioak
+        tag_names: true
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
