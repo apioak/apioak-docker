@@ -14,10 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag apioak:latest
+    - name: Build and publish images
+      uses: ilteoood/docker_buildx@master
       with:
         publish: true
+        imageName: hyr326/apioak
+        tag: latest
         dockerHubUser: ${{ secrets.DOCKER_USERNAME }}
         dockerHubPassword : ${{ secrets.DOCKER_PASSWORD }}
-
