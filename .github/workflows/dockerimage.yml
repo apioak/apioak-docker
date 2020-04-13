@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and publish images
-      uses: ilteoood/docker_buildx@master
+      uses: elgohr/Publish-Docker-Github-Action@master
       with:
         publish: true
         imageName: hyr326/apioak
