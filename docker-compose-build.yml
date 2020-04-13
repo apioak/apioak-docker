@@ -16,7 +16,9 @@ services:
     networks:
       - apioak
   apioak:
-    image: hyr326/apioak:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
     depends_on: 
       - mysql
     ports:
