@@ -16,7 +16,7 @@ services:
     networks:
       - apioak
   apioak:
-    image: hyr326/apioak:latest
+    image: apioak/apioak:latest
     depends_on: 
       - mysql
     ports:
