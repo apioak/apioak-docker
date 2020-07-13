@@ -1,6 +1,6 @@
 FROM centos:7
 
-ENV VERSION=0.4.0
+ENV VERSION=0.5.0
 
 
 RUN yum install -y yum-utils && yum-config-manager --add-repo https://openresty.org/package/centos/openresty.repo  && \
